@@ -1,6 +1,11 @@
 const express = require('express');
+// Import GraphQL module.
+const { graphqlHTTP } = require('express-graphql');
 
 const app = express();
+
+// route to use graphql and need to creat schema
+app.use('/graphql', graphqlHTTP({}));
 
 app.listen(4000, () => {
   console.log(`Listening on port 4000`);
