@@ -10,6 +10,8 @@ app.use(
   '/graphql',
   graphqlHTTP({
     schema,
+    // To use GUI
+    graphiql: true,
   })
 );
 
